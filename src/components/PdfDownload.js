@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     body :{
         // backgroundColor: '#07575B',
         backgroundColor: '#132925',
+        display:'none'
     },
     size :{
         height:320,
@@ -162,8 +163,122 @@ detailsProperty:{
   },
   propertyRow2Colour:{
     backgroundColor:'#F7F7F7'
-  }
-    
+  },
+  facilityPoint:{
+    color:'white',
+    alignItems:'center',
+    justifyContent:'center',
+    paddingVertical:4,
+    paddingHorizontal:40,
+    marginLeft:45,
+    marginTop:6,
+    fontSize:16,
+  },
+  logoActualImage:{ 
+    height: 42, 
+    width: 80,
+    marginTop:-43,
+    marginRight:10,
+    //  marginBottom:5,
+     marginLeft:537
+   },
+  
+   actualViewImage:{
+    marginTop:20,
+     marginLeft: 40,
+      marginRight: 20,
+       marginBottom: 10,
+        height: 240
+   },
+   actualView3Images:{
+    marginTop:27,
+     marginLeft: 10,
+       marginBottom: 10,
+        height: 235,
+        width:295
+   },
+   logoActualView3Image:{ 
+    height: 42, 
+    width: 80,
+    marginTop:-37,
+    marginRight:10,
+    //  marginBottom:5,
+     marginLeft:537
+   },
+   vicinityColour:{
+    backgroundColor:'#FBE9E7',
+    display:'none'
+   },
+   vicinityView3Images:{
+    marginTop:27,
+     marginLeft: 30,
+       marginBottom: 10,
+        height: 180,
+        width:150
+   },
+   logoVicinityView3Image:{ 
+    height: 42, 
+    width: 80,
+    marginTop:-37,
+    marginRight:10,
+    //  marginBottom:5,
+     marginLeft:515
+   },
+   brandMappingImages:{
+    marginTop:18,
+     marginLeft: 60,
+       marginBottom: 10,
+        height: 240,
+        width:490
+   },
+   logoBrandMappingImages:{ 
+    height: 42, 
+    width: 80,
+    marginTop:-54,
+    marginRight:10,
+    //  marginBottom:5,
+     marginLeft:534
+   },
+   floorPlanBackgroundColour:{
+    backgroundColor:'#C6B397',
+    display:'none'
+   },
+   floorPlanImages:{
+    marginTop:-45,
+     marginLeft: 190,
+       marginBottom: 5,
+        height: 308,
+        width:260
+   },
+   logoFloorPlanImages:{ 
+    height: 42, 
+    width: 80,
+    marginTop:-53,
+    marginRight:10,
+    //  marginBottom:5,
+     marginLeft:534
+   },
+   floorPlanColour:{ 
+    color: '#0C231F', 
+    fontSize: 34,
+     marginTop: 5, 
+     marginLeft: 5 ,
+     display:'flex'
+    },
+    floorColour:{ 
+        color: '#0C231F', 
+        fontSize: 16, 
+        marginLeft: 20 ,
+        display:'flex'
+    },
+    logoContactDetailsmages:{ 
+        height: 50, 
+        width: 85,
+        marginTop:-72,
+        marginRight:10,
+        //  marginBottom:5,
+         marginLeft:530
+       },
 });
 
 console.log('Background color:', styles.body.backgroundColor);
@@ -171,6 +286,7 @@ const PdfDownload = () => {
     return (
   <Document>
 
+{/*--------------------------- Main Page----------------------------- */}
 
       <Page size={styles.size} style={{ ...styles.body, flexDirection: 'row', }}>
 <View style={{ flex: 7 , alignItems:'center',paddingTop:10, }}>
@@ -192,6 +308,9 @@ const PdfDownload = () => {
     <Text>21st Nov 2023</Text>
   </View>
 </Page>
+
+{/*--------------------------- City  Overview Page----------------------------- */}
+
 
 <Page size={styles.size} style={styles.body}>
   <View style={styles.twoColumnContainer}>
@@ -249,6 +368,9 @@ const PdfDownload = () => {
   </View>
 </Page>
 
+{/*--------------------------- Google  View Page----------------------------- */}
+
+
 <Page size={styles.size}  style={styles.body}>
 <View style={{flexDirection: 'row',  alignItems: 'center', paddingTop: 10, backgroundColor: '#B7A292' }}>
     <Text style={styles.googleView}>Google View</Text>
@@ -258,6 +380,9 @@ const PdfDownload = () => {
     <Image style={{...styles.size , ...styles.googleImage }} src="google.jpg" />
   </View>
       </Page>
+
+{/*--------------------------- Property  Images Page----------------------------- */}
+
 
       <Page size={styles.size}  style={styles.body}>
 <View style={{flexDirection: 'row',  alignItems: 'center', paddingTop: 10, backgroundColor: '#B7A292' }}>
@@ -352,83 +477,357 @@ const PdfDownload = () => {
   </View>
   </View>
       </Page>
-{/* 
-      <Page size={styles.size}  style={styles.body}>
-      <Text style={{ color: 'black', fontSize: 34, lineHeight: 1.5, display: 'flex', marginLeft:180 }}>Checking 2</Text>
-      </Page> */}
 
-     
+{/*--------------------------- Modern  Facilities Page----------------------------- */}
+
 
       <Page size={styles.size} style={styles.body}>
-      </Page>
+  <View style={styles.twoColumnContainer}>
+    <View style={{ ...styles.column, flex: 4 }}>
+      <Text style={styles.cityOverview}>
+        Modern Facilities
+      </Text>
+      <Image style={{ height: 248, width: 248, marginTop: 10 }} src="image6.jpg" />
+    </View>
+    <View style={{ flex: 6 ,marginTop:40,}}>
+      <Text style={styles.facilityPoint}>• Vaastu Compliant</Text>
+      <Text style={styles.facilityPoint}>• RO Water System</Text>
+      <Text style={styles.facilityPoint}>• High-Speed Internet</Text>
+      <Text style={styles.facilityPoint}>• Wheelchair Accessibility</Text>
+      <Text style={styles.facilityPoint}>• Maintenance Staff</Text>
+      <Text style={styles.facilityPoint}>• Power Backup</Text>
+      <Text style={styles.facilityPoint}>• Dedicated Parking</Text>
+    </View>
+  </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body} >
-      </Page>
+{/*--------------------------- Actual  View Page----------------------------- */}
 
-      <Page size={styles.size} style={styles.body}>
-      </Page>
 
-      <Page size={styles.size} style={styles.body} >
-      </Page>
+<Page size={styles.size} style={{ ...styles.body, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: 'white', fontSize: 34, marginTop: 10, marginLeft: 20 }}>Actual View</Text>
+    <Image style={{...styles.logoActualImage}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualViewImage ,width:260}} src="image3.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualViewImage,width:200 }} src="image2.jpg" />
+    </View>
+  </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body}>
-      </Page> 
+<Page size={styles.size} style={{ ...styles.body, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: 'white', fontSize: 34, marginTop: 5, marginLeft: 20 }}>Actual View</Text>
+    <Image style={{...styles.logoActualView3Image}} src="logo.jpg" />
+  </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images,width:450,marginLeft:85,height:225, }} src="construction6.jpg" />
+    </View>
+</Page>
+<Page size={styles.size} style={{ ...styles.body, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: 'white', fontSize: 34, marginTop: 5, marginLeft: 20 }}>Actual View</Text>
+    <Image style={{...styles.logoActualView3Image}} src="logo.jpg" />
+  </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images,width:450,marginLeft:85,height:225, }} src="construction7.jpg" />
+    </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body} >
-      </Page>
+<Page size={styles.size} style={{ ...styles.body, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: 'white', fontSize: 34, marginTop: 5, marginLeft: 20 }}>Actual View</Text>
+    <Image style={{...styles.logoActualView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images }} src="construction1.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images,marginLeft:0 }} src="construction2.jpg" />
+    </View>
+  </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body}>
-      </Page>
+<Page size={styles.size} style={{ ...styles.body, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: 'white', fontSize: 34, marginTop: 5, marginLeft: 20 }}>Actual View</Text>
+    <Image style={{...styles.logoActualView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images }} src="constructin3.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images,marginLeft:0 }} src="constructin4.jpg" />
+    </View>
+  </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body} >
-      </Page>
+<Page size={styles.size} style={{ ...styles.body, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: 'white', fontSize: 34, marginTop: 5, marginLeft: 20 }}>Actual View</Text>
+    <Image style={{...styles.logoActualView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images }} src="constructin5.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.actualView3Images,marginLeft:0 }} src="construction1.jpg" />
+    </View>
+  </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body}>
-      </Page>
+{/*--------------------------- Brand  Mapping Page----------------------------- */}
 
-       <Page size={styles.size} style={styles.body} >
-      </Page>
 
-      <Page size={styles.size} style={styles.body}>
-      </Page>
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: 'black', fontSize: 40, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Brand Mapping</Text>
+    <Image style={{...styles.logoBrandMappingImages}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.brandMappingImages }} src="plan1.jpg" />
+    </View>
+  </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body} >
-      </Page>
+{/*--------------------------- Floor Plan Pages----------------------------- */}
 
-      <Page size={styles.size} style={styles.body}>
-      </Page>
 
-       <Page size={styles.size} style={styles.body} >
-      </Page>
+<Page size={styles.size} style={{ ...styles.floorPlanBackgroundColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ ...styles.floorPlanColour}}>Floor Plan</Text>
+    <Text style={{ ...styles.floorColour}}>Basement Floor</Text>
+1
+    <Image style={{...styles.logoFloorPlanImages}} src="logo.jpg" />
+  </View>
+   <View style={{ flex: 4 }}>
+      <Image style={{...styles.floorPlanImages }} src="plan1.jpg" />
+    </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body}>
-      </Page>
+<Page size={styles.size} style={{ ...styles.floorPlanBackgroundColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ ...styles.floorPlanColour}}>Floor Plan</Text>
+    <Text style={{ ...styles.floorColour}}>Ground Floor</Text>
+1
+    <Image style={{...styles.logoFloorPlanImages}} src="logo.jpg" />
+  </View>
+   <View style={{ flex: 4 }}>
+      <Image style={{...styles.floorPlanImages }} src="plan2.jpg" />
+    </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body} >
-      </Page>
+<Page size={styles.size} style={{ ...styles.floorPlanBackgroundColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ ...styles.floorPlanColour}}>Floor Plan</Text>
+    <Text style={{ ...styles.floorColour}}>1
+    <Text style={{ fontSize: 12, verticalAlign: 'super', marginLeft: 2 }}>st</Text> Floor</Text>
+1
+    <Image style={{...styles.logoFloorPlanImages}} src="logo.jpg" />
+  </View>
+   <View style={{ flex: 4 }}>
+      <Image style={{...styles.floorPlanImages }} src="plan3.jpg" />
+    </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body}>
-      </Page> 
-      
-      <Page size={styles.size} style={styles.body} >
-      </Page>
+<Page size={styles.size} style={{ ...styles.floorPlanBackgroundColour, flexDirection: 'column' }}>
+  <View>
+    <Image style={{...styles.logoFloorPlanImages, marginTop:5,}} src="logo.jpg" />
+  </View>
+   <View style={{ flex: 4 }}>
+      <Image style={{...styles.floorPlanImages, }} src="plan4.jpg" />
+    </View>
+</Page>
 
-      <Page size={styles.size} style={styles.body}>
-      </Page>
+{/*--------------------------- Vicinity Images Pages----------------------------- */}
 
-      <Page size={styles.size} style={styles.body} >
-      </Page>
 
-      <Page size={styles.size} style={styles.body}>
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shoping1.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping2.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping3.jpg" />
+    </View>
+  </View>
+</Page>
+
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shopping4.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping5.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping6.jpg" />
+    </View>
+  </View>
+</Page>
+
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shopping7.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shopping8.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shopping9.jpg" />
+    </View>
+  </View>
+</Page>
+
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shoping1.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping2.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping3.jpg" />
+    </View>
+  </View>
+</Page>
+
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shopping4.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping5.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping6.jpg" />
+    </View>
+  </View>
+</Page>
+
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shopping7.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shopping8.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shopping9.jpg" />
+    </View>
+  </View>
+</Page>
+
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shoping1.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping2.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping3.jpg" />
+    </View>
+  </View>
+</Page>
+
+<Page size={styles.size} style={{ ...styles.vicinityColour, flexDirection: 'column' }}>
+  <View>
+    <Text style={{ color: '#5D4037', fontSize: 34, marginTop: 15, marginLeft: 180 ,display:'flex'}}>Vicinity Images</Text>
+    <Image style={{...styles.logoVicinityView3Image}} src="logo.jpg" />
+  </View>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images }} src="shopping4.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping5.jpg" />
+    </View>
+    <View style={{ flex: 4 }}>
+      <Image style={{...styles.vicinityView3Images, }} src="shoping6.jpg" />
+    </View>
+  </View>
+</Page>
+
+{/*--------------------------- Contact Details Page----------------------------- */}
+
+<Page size={styles.size}  style={styles.body}>
+      <View>
+      <Text style={{ color: '#D0CCBE', fontSize: 40, lineHeight: 1.5, display: 'flex', marginLeft:5,marginTop:15, }}>Contact Details</Text>
+    <Image style={{...styles.logoContactDetailsmages}} src="logo.jpg" />
+    <View style={{marginTop:35}}>
+    <Text style={{marginLeft:15,fontSize:14, color:'#D0CCBE'}}>Arpit Yagnik</Text>
+    <Text style={{marginLeft:15,fontSize:12,color:'#D0CCBE',marginTop:4}}>Mobile : +91-9636969646</Text>
+    <Text style={{marginLeft:15,fontSize:14,color:'#D0CCBE',marginTop:14}}>Ritesh Agarwal</Text>
+    <Text style={{marginLeft:15,fontSize:12,color:'#D0CCBE',marginTop:4}}>Mobile : +91-9829610077</Text>
+    <Text style={{marginLeft:12,fontSize:10,color:'#D0CCBE',marginTop:14}}>Email : arpityagnik@sthapatyaleasing.com</Text>
+    <Link src="www.sthapatyaleasing.com">
+            <Text style={{marginLeft:12, fontSize:10 ,color:'#D0CCBE' ,marginTop:4}}>
+         Website : www.sthapatyaleasing.com
+            </Text>
+        </Link>
+    <Text style={{marginLeft:2,color:'#D0CCBE',fontSize:10,marginTop:40}}><Text style={{marginLeft:2,color:'#D0CCBE',fontSize:12,marginTop:30}}>Our Address -</Text> Sthapatya Leasing & Consultant E-143, 1st Floor, Nirman Nagar, Opp. Hotel Kiran Palace DCM, Ajmer Road, Jaipur</Text>
+
+    </View>
+
+    <View style={{marginTop:2,backgroundColor:'#FFFDE7'}}>
+    <Text style={{marginLeft:2,color:'#1E2224',fontSize:8,marginTop:5}}><Text style={{marginLeft:2,color:'#9A6237',fontSize:12,marginTop:30}}>Disclaimer:</Text>  Details & Pictures mentioned in this presentation is for illustration purpose only & cannot be in any way treated as a legal document. All information, specifications, plans, materials, dates, & visual 
+representations contained are subject to change from time to time by the Land Owner / Realtor / Company / Competent Authorities and shall not form part of any contract, offer or deal. Sizes, Rates, Specifications, and 
+Availability of the project/property may change without any prior information and Land Owner / Realtor / Company shall not be held responsible in any manner whatsoever.</Text>
+
+    </View>
+    </View>
       </Page>
 
       <Page size={styles.size} style={styles.body}>
       <Text style={{textAlign:'center',display: 'flex',marginTop:'120px',alignItems:'center',color:'white',fontSize:54,justifyContent:'center'}}>Thank you</Text>
-      </Page>
-    
+      </Page>   
 
-
-    
   </Document>
     );
 };
